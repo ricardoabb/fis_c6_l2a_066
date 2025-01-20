@@ -97,7 +97,7 @@ export function TextBox({ content = "", title, image, imagesubtitle, hide = fals
 
       <div id="box-container" className={`px-5 py-7 bg-gradient-to-r from-sand-300 to-sand-100 rounded-2xl mt-5 bg-[#fff]`}>
         <div className={`h-32 md:h-24 text-base text-[#BB7843] font-medium`}>
-          <AnimatedText text={content} limit={150} />
+          <AnimatedText text={content} limit={158} />
         </div>
       </div>
 

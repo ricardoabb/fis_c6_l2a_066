@@ -4,6 +4,7 @@ import { useMapStore } from "../store/useMapStore";
 import Link from "next/link";
 import Menu from "./Menu";
 import { ReactNode } from "react";
+import { CardModal } from "./CardModal";
 
 type LayoutProps = {
 children: ReactNode;
@@ -18,6 +19,7 @@ export default function Home({ children }: LayoutProps) {
           {children}
         </section>
         <Menu />
+        <CardModal />
       </main>
     </div>
   );

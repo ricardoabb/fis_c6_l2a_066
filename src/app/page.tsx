@@ -17,6 +17,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 import { info } from './utils/info';
+import { stringify } from 'querystring';
 
 interface MapProps {
     mapSrc?: string;
@@ -39,13 +40,26 @@ export default function Info() {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
 
+    const { currentId, isActiveId, setCurrentId, setIsActiveId } = useMapStore();
+    
     const handleSlideChange = (swiper: any) => {
         setActiveIndex(swiper.activeIndex);
+        setCurrentId(sliderRef.current?.swiper.activeIndex, false);
+        console.log(sliderRef.current?.swiper.activeIndex)
+        console.log(currentId)
+        
+        
+  
+        
         // setModal({ image1: `${card[swiper.activeIndex].image}`, title: `${card[swiper.activeIndex].title}`, subtitle: `${card[swiper.activeIndex].subtitle}` });
 
     };
+
+
+    
     const isFirst = info[0];
     const isLast = info.length - 1;
+
 
 
     return (
@@ -69,8 +83,7 @@ export default function Info() {
                 >
 
                     {info?.map((item, index) => {
-                    console.log(item.image);
-                    
+                                        
                         return (
 
                             <SwiperSlide key={index}>
@@ -95,7 +108,9 @@ export default function Info() {
                     onClick={() => {
                         setIndex(sliderRef.current?.swiper.realIndex);
                         setIsEnd(sliderRef.current?.swiper.isEnd);
-                        sliderRef.current?.swiper.slidePrev();
+                        sliderRef.current?.swiper.slidePrev();                        
+                        
+                        
                     }}>
                     <div >
                         <svg className='w-[46px] md:w[66px] h-[30px] md:h-[50px]' width="66" height="50" viewBox="0 0 35 46" fill="#BB7843" xmlns="http://www.w3.org/2000/svg">
@@ -111,8 +126,7 @@ export default function Info() {
                         setIndex(sliderRef.current?.swiper.realIndex);
                         setIsEnd(sliderRef.current?.swiper.isEnd)
                         sliderRef.current?.swiper.slideNext();
-
-
+                        
                     }}>
                     <div >
                         <svg className='w-[46px] md:w[66px] h-[30px] md:h-[50px]' viewBox="0 0 35 46" fill="#BB7843" xmlns="http://www.w3.org/2000/svg">

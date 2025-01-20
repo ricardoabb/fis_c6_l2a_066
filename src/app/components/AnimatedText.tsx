@@ -5,6 +5,7 @@ import React, { useState, useEffect } from 'react';
 
 
 import iconRight from '../assets/icon-more.svg';
+import { useMapStore } from "../store/useMapStore";
 
 
 
@@ -23,6 +24,8 @@ export function AnimatedText({ text, limit = 140, delay = 5 }: TextBoxProps) {
   const [displayBtnNext, setDisplayBtnNext] = useState<string>('hidden');
   const [animationNextBtn, setAnimationNextBtn] = useState<string>('animate-fade-in-out');
 
+   const { currentId, isActiveId, setCurrentId, setIsActiveId } = useMapStore();
+
 
 
   useEffect(() => {
@@ -40,8 +43,10 @@ export function AnimatedText({ text, limit = 140, delay = 5 }: TextBoxProps) {
           // baseText.length <= limit ? setDisplayBtn('') : setDisplayBtn('hidden');
 
           baseText.length <= limit ? setAnimationNextBtn('') : setAnimationNextBtn('animate-fade-in-out');
-          baseText.length <= limit ? setDisplayBtn('') : setDisplayBtn('hidden');
+          // baseText.length <= limit ? setDisplayBtn('') : setDisplayBtn('hidden');
           //   baseText.length <= limit && image1 !== 'undefined' ? setImageActive(true) : setImageActive(false);
+          
+          baseText.length <= limit && currentId == "2" ? setCurrentId('map', false) : setCurrentId(currentId, false);
 
 
 
