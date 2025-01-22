@@ -217,7 +217,7 @@ export default function Usina() {
                         // height: '1483', // altura maior que o container
 
                     }}
-                    className='w-[300%] md:w-[100%] h-fit  p-0  '
+                    className='usina-svg w-[300%] md:w-[100%] p-0  '
                     
                     viewBox="0 0 2032 1483" fill="none" xmlns="http://www.w3.org/2000/svg"
                 >
