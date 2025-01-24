@@ -46,4 +46,5 @@ body {
 
 .usina-svg {
   height: fit-content;
+  display: block;
 }
