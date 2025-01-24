@@ -18,7 +18,7 @@ export default function Menu() {
 
 
     return (
-        <nav className="absolute bottom-0 bg-[#349C8F] p-5 py-5 rounded-t-xl flex gap-5 z-[100]">
+        <nav className="absolute bottom-0 bg-[#349C8F] p-5 py-5 rounded-t-xl flex gap-5 z-[999]">
             {/* Ícone com cor alterada quando a rota for '/info' */}
             <Link href="/" onClick={() => setCurrentId('0', false)}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="63" height="54" viewBox="0 0 24 24">

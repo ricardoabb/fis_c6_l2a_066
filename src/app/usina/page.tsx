@@ -216,7 +216,7 @@ export default function Usina() {
                   
 
                     }}
-                    className='usina-svg w-[200%] md:w-[200%] p-0'
+                    className='usina-svg w-[200%] md:w-[200%] lg:w-[150%] p-0'
                     width="2033px"
                     height="1484px"
                     viewBox="0 0 2032 1484"
