@@ -217,9 +217,9 @@ export default function Usina() {
 
                     }}
                     className='usina-svg w-[200%] md:w-[100%] p-0'
-                    width="100%"
-                    height="100%"
-                    viewBox="0 0 2032 1483"
+                    width="2033px"
+                    height="1484px"
+                    viewBox="0 0 2032 1484"
                     preserveAspectRatio="xMidYMid meet"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
